@@ -1,24 +1,27 @@
+// Copyright 2024 Andrew
+
 #include <gtest/gtest.h>
 #include "Automata.h"
-TEST(BASE, sleep) {
+
+TEST(BASE, 1) {
     Automata coffee;
     EXPECT_EQ(0, coffee.getState());
 }
 
-TEST(BASE, turn_on) {
+TEST(BASE, 2) {
     Automata coffee;
     coffee.on();
     EXPECT_EQ(1, coffee.getState());
 }
 
-TEST(BASE, accept_money) {
+TEST(BASE, 3) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
     EXPECT_EQ(2, coffee.getState());
 }
 
-TEST(BASE, choice) {
+TEST(BASE, 4) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -26,7 +29,7 @@ TEST(BASE, choice) {
     EXPECT_EQ(2, coffee.getState());
 }
 
-TEST(BASE, check) {
+TEST(BASE, 5) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -34,7 +37,7 @@ TEST(BASE, check) {
     EXPECT_EQ(1, coffee.getState());
 }
 
-TEST(BASE, cook) {
+TEST(BASE, 6) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -42,7 +45,7 @@ TEST(BASE, cook) {
     EXPECT_EQ(3, coffee.getState());
 }
 
-TEST(BASE, finish) {
+TEST(BASE, 7) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -51,7 +54,7 @@ TEST(BASE, finish) {
     EXPECT_EQ(1, coffee.getState());
 }
 
-TEST(BASE, off) {
+TEST(BASE, 8) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -61,7 +64,7 @@ TEST(BASE, off) {
     EXPECT_EQ(4, coffee.getState());
 }
 
-TEST(BASE, insufficient_funds) {
+TEST(BASE, 9) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);
@@ -73,7 +76,7 @@ TEST(BASE, insufficient_funds) {
     EXPECT_EQ(0, coffee.getState());
 }
 
-TEST(BASE, get_money_back) {
+TEST(BASE, 10) {
     Automata coffee;
     coffee.on();
     coffee.coin(50);

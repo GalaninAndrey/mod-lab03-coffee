@@ -1,10 +1,14 @@
+// Copyright 2024 Andrew
+
 #include <iostream>
 #include <string>
 #include <map>
 #include <stdexcept>
+
 using namespace std;
+
 class Automata {
-public:
+ public:
     enum states {
         OFF,
         WAIT,
@@ -24,7 +28,7 @@ public:
     void cook();
     void finish();
 
-private:
+ private:
     struct coffe {
         string name;
         int price;

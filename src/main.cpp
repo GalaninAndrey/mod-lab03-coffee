@@ -1,3 +1,5 @@
+// Copyright 2024 Andrew
+
 #include "Automata.h"
 
 int main() {
