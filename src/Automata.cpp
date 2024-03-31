@@ -17,14 +17,14 @@ Automata::Automata() {
 void Automata::on() {
     if (state == states::OFF) {
         state = states::WAIT;
-        cout << "Ready" << endl;
+        std::cout << "Ready" << std::endl;
     }
 }
 
 void Automata::off() {
     if (state == states::WAIT) {
         state = states::OFF;
-        cout << "Turned off" << endl;
+        std::cout << "Turned off" << std::endl;
     }
 }
 
@@ -34,13 +34,13 @@ void Automata::coin(int money) {
     }
     if (state == Automata::ACCEPT) {
         cash += money;
-        cout << "Accepted" << endl;
+        std::cout << "Accepted" << std::endl;
     }
 }
 
 void Automata::getMenu() {
     for (const auto& [k, v] : menu)
-        cout << k << " " << v.name << " " << v.price << "\n";
+        std::cout << k << " " << v.name << " " << v.price << "\n";
 }
 
 int Automata::getState() {
@@ -50,7 +50,7 @@ int Automata::getState() {
 void Automata::choice(int number) {
     if (state == states::ACCEPT) {
         product = menu.at(number);
-        cout << product.name << " " << product.price << endl;
+        std::cout << product.name << " " << product.price << std::endl;
         state = states::CHECK;
     }
 }
@@ -76,7 +76,7 @@ void Automata::cook() {
     if (state == states::CHECK) {
         if (check()) {
             cash -= product.price;
-            cout << "Cooking" << endl;
+            std::cout << "Cooking" << std::endl;
             state = states::COOK;
         }
     }
@@ -84,7 +84,7 @@ void Automata::cook() {
 
 void Automata::finish() {
     if (state == states::COOK) {
-        cout << "Ready" << endl;
+        std::cout << "Ready" << std::endl;
         state = states::WAIT;
     }
 }

@@ -1,11 +1,12 @@
 // Copyright 2024 Andrew
 
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
+
 #include <iostream>
 #include <string>
 #include <map>
 #include <stdexcept>
-
-using namespace std;
 
 class Automata {
  public:
@@ -30,11 +31,13 @@ class Automata {
 
  private:
     struct coffe {
-        string name;
+        std::string name;
         int price;
     };
-    map<int, coffe> menu;
+    std::map<int, coffe> menu;
     int cash;
     states state;
     coffe product;
 };
+
+#endif //INCLUDE_AUTOMATA_H_
